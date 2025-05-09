@@ -14,9 +14,10 @@ int main(){
 	cin >> R[i];
 	}
 
-	int cumulativeTotal[N];
+	int cumulativeTotal[10009];
+    cumulativeTotal[0] = 0;
 	for (int i = 1; i <= N; i++){
-		cumulativeTotal[i] += A[i];
+		cumulativeTotal[i] = A[i] + cumulativeTotal[i - 1];
 	}
 	for (int i = 1; i <= Q; i++){
 		cout << cumulativeTotal[R[i]] - cumulativeTotal[L[i]-1]  << endl;
