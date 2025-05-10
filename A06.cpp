@@ -3,9 +3,9 @@ using namespace std;
 
 int main(){
 	int N, Q;
-	int A[10009];
-	int L[10009];
-	int R[10009];
+	int A[100009];
+	int L[100009];
+	int R[100009];
 
 	cin >> N >> Q;
 	for (int i = 1; i <= N; i++) cin >> A[i];
